@@ -32,7 +32,7 @@ const components = [
   },
 ];
 
-export function Navbar() {
+export function Navbar({sideMenu}) {
   return (
     <div className=" flex justify-center items-center px-6">
       <Link
@@ -52,7 +52,8 @@ export function Navbar() {
                   key={component.title}
                   href={component.href}
                 >
-                  {component.title}
+                
+                   {component.title !== "Signin" ? component.title : sideMenu && component.title}
                 </NavigationMenuLink>
               ))}
             </ul>
