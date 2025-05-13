@@ -14,6 +14,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cdn-icons-png.freepik.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'a0.muscache.com'
+      }
     ],
   },
 };

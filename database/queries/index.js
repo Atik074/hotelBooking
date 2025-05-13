@@ -4,7 +4,14 @@ import { replaceMongoIdArray, replaceMongoIdObj } from "@/utils/data-util";
 export async function getAllHotels() {
 
     try{
-       const hotels = await hotelModel.find().lean()
+       const hotels = await hotelModel.find().select([
+        "thumbNailUrl" ,
+        "name" ,
+        "highRate",
+        "lowRate" , 
+        "city" ,
+        "propertyCategory"
+]).lean()
         return replaceMongoIdArray(hotels) ;
     }catch(error){
         throw error ;

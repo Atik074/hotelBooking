@@ -11,7 +11,7 @@ import LogOut from "../auth/LogOut";
 
 export async function Navbar({ sideMenu }) {
   const session = await auth();
-  console.log(sideMenu)
+  
 
   return (
     <div className=" flex justify-center items-center px-6">
@@ -26,7 +26,7 @@ export async function Navbar({ sideMenu }) {
         <NavigationMenuList>
           <NavigationMenuItem>
            
-            <ul className="text-[20px] font-normal">
+            <ul className="text-[20px] font-normal mr-6">
               <NavigationMenuLink asChild>
                 <Link href="/Recomanded Place">Recomanded Place</Link>
               </NavigationMenuLink>
