@@ -1,4 +1,9 @@
+import Link from "next/link";
+import HotelRatings from "./HotelRatings";
+import HotelReviewNumber from "./HotelReviewNumber";
+
 const HotelSummeryInfo = ({ fromListPage ,info }) => {
+
   return (
     <>
       <div className={fromListPage ? "flex-1" : "flex-1 container"}>
@@ -9,11 +14,8 @@ const HotelSummeryInfo = ({ fromListPage ,info }) => {
         </h2>
         <p className="text-[16px]">📍 {info?.city}</p>
         <div className="flex gap-2 items-center my-4">
-          <div className="bg-primary w-[35px] h-[35px]  text-white grid place-items-center font-bold bg-amber-600 rounded-2xl">
-            5.3
-          </div>
-          <span className="font-medium">Very Good</span>
-          <span>232 Reviews</span>
+         <HotelRatings id={info?.id}/>
+          <HotelReviewNumber id={info?.id}/>
         </div>
           <div>
             <span className="bg-amber-500 p-1 text-[17px] rounded">{info?.
@@ -27,11 +29,11 @@ propertyCategory} star Property</span>
         (info?.highRate + 
        info?.lowRate)/2}/night
 </h2>
-        <p className=" text-right">Per Night for 3 Rooms</p>
+        <p className="text-right">Per Night for 3 Rooms</p>
         {fromListPage ? (
-          <button className="btn-primary">Details</button>
+          <Link href={`hotels/${info?.id}`} className="btn-primary">Details</Link>
         ) : (
-          <button className="btn-primary ">Book</button>
+          <Link href="#" className="btn-primary ">Book</Link>
         )}
       </div>
     </>

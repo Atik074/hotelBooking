@@ -21,6 +21,14 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'a0.muscache.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 't3.ftcdn.net'
+      } ,
+      {
+        protocol: 'https',
+        hostname: 'media.istockphoto.com'
       }
     ],
   },
