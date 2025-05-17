@@ -32,12 +32,13 @@
   }
 
   .search-btn {
-    @apply bg-primary px-8 py-3  bg-[#F79F1F]  mt-[34px] rounded-[5px] block mx-auto text-white font-bold -translate-y-1/2 shadow-lg hover:shadow-primary/50 active:scale-95 transition-all;
+    @apply bg-primary px-8 py-3  bg-[#ef9103]  mt-[34px] rounded-[5px] block mx-auto text-white font-bold -translate-y-1/2 shadow-lg hover:shadow-primary/50 active:scale-95 transition-all;
   }
 
   .btn-primary {
     @apply bg-primary px-8 py-3  block  font-medium border shadow rounded-full border-[#95a5a6] text-xl  active:scale-95 transition-all;
   }
+  .btn-disabled{@apply bg-gray-500 px-8 py-3 text-white  block  font-medium border shadow rounded-full border-[#95a5a6] text-xl  active:scale-95 transition-all cursor-default;}
 
    /* #searchParams {
     @apply bg-white w-full h-full py-10 lg:py-12 px-6 lg:px-8 rounded-xl border border-black/10 shadow-lg items-center [&>*]:flex-1 [&>*]:px-4 [&>div>span]:mb-3 space-y-5 lg:space-y-0;
@@ -70,5 +71,8 @@
 
   input[type="checkbox"] {
     @apply mx-1
+  }
+  button:disabled{
+    @apply bg-gray-400 cursor-default
   }
 }
