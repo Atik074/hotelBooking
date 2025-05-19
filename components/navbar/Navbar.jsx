@@ -11,6 +11,8 @@ import LogOut from "../auth/LogOut";
 
 export async function Navbar({ sideMenu }) {
   const session = await auth();
+
+   
   
 
   return (
@@ -21,6 +23,8 @@ export async function Navbar({ sideMenu }) {
       >
         HotelHub
       </Link>
+          
+  
 
       <NavigationMenu className="mr-[40px]">
         <NavigationMenuList>

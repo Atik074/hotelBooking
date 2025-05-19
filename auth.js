@@ -29,10 +29,10 @@ export const {
         if (!credentials) return null;
 
         try {
-          const user = await userModel.findOne({ email: credentials?.email });
+          const user = await userModel.findOne({email: credentials?.email });
 
           if (user) {
-            const isMatch = bcrypt.compare(
+            const isMatch =await bcrypt.compare(
               credentials.password,
               user.password
             );
@@ -51,10 +51,12 @@ export const {
       },
     }),
     GoogleProvider({
+       allowDangerousEmailAccountLinking:true ,
       clientId: process.env.AUTH_GOOGLE_ID,
       clientSecret: process.env.AUTH_GOOGLE_SECRET,
     }),
     FacebookProvider({
+        allowDangerousEmailAccountLinking:true ,
       clientId: process.env.AUTH_FACEBOOK_ID,
       clientSecret: process.env.AUTH_FACEBOOK_SECRET,
     }),

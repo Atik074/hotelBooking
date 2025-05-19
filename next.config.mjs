@@ -28,6 +28,10 @@ const nextConfig = {
       } ,
       {
         protocol: 'https',
+        hostname: 'platform-lookaside.fbsbx.com'
+      } ,
+      {
+        protocol: 'https',
         hostname: 'media.istockphoto.com'
       }
     ],

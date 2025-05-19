@@ -2,6 +2,7 @@ import { bookingModel } from "@/models/bookings-model";
 import { hotelModel } from "@/models/hotels-model";
 import { ratingModel } from "@/models/ratings-model";
 import { reviewModel } from "@/models/reviews-model";
+import { userModel } from "@/models/users-model";
 import {
   isDateInBweeten,
   replaceMongoIdArray,
@@ -135,4 +136,12 @@ export async function getHotelReviews(hotelId) {
   const reviews = await reviewModel.find({ hotelId: hotelId }).lean();
 
   return replaceMongoIdArray(reviews);
+}
+
+export async function getUserByEmail(email) {
+
+  const users =  await userModel.find({email:email}).lean()
+
+  return  replaceMongoIdObj(users[0])
+  
 }

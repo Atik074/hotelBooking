@@ -41,7 +41,7 @@ propertyCategory} star Property</span>
         {fromListPage ? (
           <Link href={`/hotels/${info?.id}${params}`} className="btn-primary">Details</Link>
         ) : (
-          <Link href="#" className={info?.isBooked ? "btn-disabled" : "btn-primary "}>Book</Link>
+          <Link  href={info?.isBooked ? "#" : `/hotels/${info?.id}/payment${params}`}  className={info?.isBooked ? "btn-disabled" : "btn-primary "}>Book</Link>
         )}
       </div>
     </>
