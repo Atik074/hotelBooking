@@ -145,3 +145,10 @@ export async function getUserByEmail(email) {
   return  replaceMongoIdObj(users[0])
   
 }
+
+export async function getBookigIdByUser(userId){
+
+  const bookings = await bookingModel.find({userId:userId})
+   return replaceMongoIdArray(bookings)
+
+}

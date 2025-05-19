@@ -5,14 +5,10 @@ import { getHotelById, getUserByEmail } from "@/database/queries";
 import { getDayDifferenceInBweeten } from "@/utils/data-util";
 
 const PaymentPage = async({ params,searchParams}) => {
-    const {id} =await params ;
-   const  { checkin, checkout } = await searchParams ;
+   
+  const { id } =await params;
+  const { checkin, checkout } =await searchParams;
   
- console.log("Checkin:", checkin);
-console.log("Checkout:", checkout);
-console.log("Hotel ID:", id);
-
-
   const session = await auth();
 
   if (!session) {

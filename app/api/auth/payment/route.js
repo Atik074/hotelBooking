@@ -1,21 +1,22 @@
+
 import { bookingModel } from "@/models/bookings-model"
 import { dbConnect } from "@/service/mongoConnect"
 import mongoose from "mongoose"
-import { NextResponse } from "next/server"
+import {NextRequest, NextResponse } from "next/server"
 
-export const POST  =async(request)=>{
+ export const POST  =async(request)=>{
     const {hotelId , userId,checkin,checkout} = await request.json()
+
        await dbConnect()
 
-      
     const payload ={
-        hotelId: mongoose.Types.ObjectId(hotelId ),
-        userId: mongoose.Types.ObjectId(userId),
+        hotelId:new mongoose.Types.ObjectId(hotelId ),
+        userId:new mongoose.Types.ObjectId(userId),
         checkin ,
         checkout
 
     }
-
+ console.log(payload)
 
     try{
         await bookingModel.create(payload)
@@ -29,3 +30,4 @@ export const POST  =async(request)=>{
     }
 
 }
+

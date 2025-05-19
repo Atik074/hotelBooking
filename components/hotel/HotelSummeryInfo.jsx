@@ -2,9 +2,11 @@ import Link from "next/link";
 import HotelRatings from "./HotelRatings";
 import HotelReviewNumber from "./HotelReviewNumber";
 
-const HotelSummeryInfo = ({ fromListPage ,info,checkin , checkout }) => {
-  let  params = ""
+const HotelSummeryInfo = ({ fromListPage ,info,checkin,checkout }) => {
 
+ 
+  let  params = ""
+   
   if(checkin && checkout){
      params =`?checkin=${checkin}&checkout=${checkout}`
   }

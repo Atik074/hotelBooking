@@ -8,8 +8,8 @@ const Search = ({ fromList, destination, checkin, checkout }) => {
   const { replace } = useRouter();
   const [searchTerm, setSearchTerm] = useState({
     destination: destination || "Puglia",
-    checkin: checkin,
-    checkout: checkout,
+    checkin: checkin || '',
+    checkout: checkout  || '',
   });
   const [allowSearch, setAllowSearch] = useState(true);
 

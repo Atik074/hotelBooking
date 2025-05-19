@@ -12,14 +12,14 @@ const HotelGallery = ({ galleryImages }) => {
 
         <div className="grid grid-cols-2 grid-rows-2 h-[400px]">
            {
-            newGallery.map((image) => (
+            newGallery.map((image,i) => (
               <Image
-                key={image}
+                key={i}
                 src={image}
-                className="h-[400px]"
                 alt="Sub Pics"
                 width={400}
-                height={400} />
+                height={400}
+                />
             ))
           }
         </div>

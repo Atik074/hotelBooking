@@ -7,6 +7,7 @@ import Search from "@/components/search/Search";
 export default async function HotelListPage({ searchParams }) {
     const params = await searchParams;
   const { destination, checkin, checkout } = params || {};
+  
 
   return (
     <>

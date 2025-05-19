@@ -12,8 +12,6 @@ import LogOut from "../auth/LogOut";
 export async function Navbar({ sideMenu }) {
   const session = await auth();
 
-   
-  
 
   return (
     <div className=" flex justify-center items-center px-6">
