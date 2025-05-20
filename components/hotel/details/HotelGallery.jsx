@@ -8,7 +8,7 @@ const HotelGallery = ({ galleryImages }) => {
   return (
     <section className="container">
       <div className="grid grid-cols-2 imageshowCase">
-        <Image src={galleryImages[0]} width={400} height={400} alt="main_pic" />
+        <Image src={galleryImages[0]} width={400} height={300} alt="main_pic" />
 
         <div className="grid grid-cols-2 grid-rows-2 h-[400px]">
            {
@@ -18,7 +18,7 @@ const HotelGallery = ({ galleryImages }) => {
                 src={image}
                 alt="Sub Pics"
                 width={400}
-                height={400}
+                height={300}
                 />
             ))
           }

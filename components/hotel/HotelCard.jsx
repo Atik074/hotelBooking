@@ -10,10 +10,11 @@ const HotelCard = ({hotelInfo ,checkin, checkout}) => {
       <Image
         src={hotelInfo?.
 thumbNailUrl}
-        width={500}
-        height={160}
+        width={200}
+        height={100}
         
         alt={hotelInfo?.name}
+        className="rounded"
       />
       <HotelSummeryInfo info={hotelInfo}
        fromListPage={true}

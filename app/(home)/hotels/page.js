@@ -1,12 +1,21 @@
 // app/hotel-list/page.js
 
 import HotelList from "@/components/hotel/HotelList";
-import Filter from "@/components/search/Filter";
+import Filter from "@/components/filter/Filter";
 import Search from "@/components/search/Search";
 
+
+  const refinedCateggory =(category)=>{
+       const decodedCategory =  decodeURI(category)
+
+       if(decodedCategory === "undefined"){
+         return ""
+       }
+       return decodedCategory;
+  }
 export default async function HotelListPage({ searchParams }) {
     const params = await searchParams;
-  const { destination, checkin, checkout } = params || {};
+  const { destination, checkin, checkout ,category } = params || {};
   
 
   return (
@@ -34,6 +43,7 @@ export default async function HotelListPage({ searchParams }) {
               destination={destination}
               checkin={checkin}
               checkout={checkout}
+              category={refinedCateggory(category)}
             />
           </div>
         </div>
